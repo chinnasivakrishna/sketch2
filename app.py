@@ -52,13 +52,11 @@ def process_image(file):
     return sketch_image
 
 @app.route('/')
-@app.route('/')
 def upload_form():
     # Render the HTML form for image upload (index.html)
     with open('index.html', 'r') as f:
         html_content = f.read()
     return html_content
-
 
 @app.route('/upload', methods=['POST'])
 def upload():
