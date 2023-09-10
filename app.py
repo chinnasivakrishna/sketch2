@@ -1,7 +1,7 @@
 import os
 import cv2
 import numpy as np
-from flask import Flask, request, render_template, send_file
+from flask import Flask, request, send_file, render_template
 from io import BytesIO
 
 app = Flask(__name__)
@@ -52,8 +52,13 @@ def process_image(file):
     return sketch_image
 
 @app.route('/')
+@app.route('/')
 def upload_form():
-    return render_template('upload.html')
+    # Render the HTML form for image upload (index.html)
+    with open('index.html', 'r') as f:
+        html_content = f.read()
+    return html_content
+
 
 @app.route('/upload', methods=['POST'])
 def upload():
