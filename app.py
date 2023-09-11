@@ -5,8 +5,6 @@ from flask import Flask, request, send_file, render_template
 from io import BytesIO
 
 app = Flask(__name__)
-PROCESSED_FOLDER = 'static/processed_images'
-app.config['PROCESSED_FOLDER'] = PROCESSED_FOLDER
 
 def process_image(file):
     # Read the uploaded image from memory
