@@ -60,7 +60,7 @@ def upload_form():
         html_content = f.read()
     return html_content
 
-@app.route('/index', methods=['POST'])
+@app.route('/https://github.com/chinnasivakrishna/sketch2/blob/main/index.html', methods=['POST'])
 def upload():
     if 'image' not in request.files:
         return "No file part"
