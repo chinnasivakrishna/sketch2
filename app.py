@@ -60,7 +60,7 @@ def upload_form():
         html_content = f.read()
     return html_content
 
-@app.route('/upload', methods=['POST'])
+@app.route('/index', methods=['POST'])
 def upload():
     if 'image' not in request.files:
         return "No file part"
